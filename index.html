@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panth Shah | Cybersecurity Portfolio</title>
+    <style>
+        body {
+            background-color: #0d1117; /* GitHub Dark Mode Background */
+            color: #00f0ff; /* Cyberpunk Blue/Green */
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        h1 { border-bottom: 2px solid #00f0ff; padding-bottom: 10px; }
+        .section { margin-bottom: 30px; }
+        .command { color: #39d353; font-weight: bold; } /* Terminal Green */
+        a { color: #fff; text-decoration: underline; }
+        a:hover { color: #00f0ff; }
+        
+        .project-card {
+            border: 1px solid #30363d;
+            padding: 15px;
+            background: #161b22;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <p class="command">root@kali:~$ ./whoami</p>
+        <h1>Panth Shah</h1>
+        <p>CS Student | Cybersecurity Enthusiast | Python Developer</p>
+    </header>
+
+    <div class="section">
+        <p class="command">root@kali:~$ cat about.txt</p>
+        <p>
+            Hello! I am a Computer Science student passionate about Network Security and Automation.
+            I build tools to test system security and automate boring tasks.
+            Currently learning: <b>Ethical Hacking & React.js</b>.
+        </p>
+    </div>
+
+    <div class="section">
+        <p class="command">root@kali:~$ ls ./projects</p>
+        
+        <div class="project-card">
+            <h3>🔐 Python Password Strength Checker</h3>
+            <p>A cybersecurity tool that assesses password complexity using RegEx.</p>
+            <p>Status: <span style="color:#39d353">Completed</span></p>
+            <br>
+            <a href="https://github.com/panthu13147/Python-Password-Strength-Checker" target="_blank">
+                [ View Source Code on GitHub ]
+            </a>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <p class="command">root@kali:~$ ./contact_me</p>
+        <p>Find me on:</p>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/panth-shah-700165295/" target="_blank">LinkedIn Profile</a></li>
+            <li><a href="https://github.com/panthu13147" target="_blank">GitHub Profile</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
