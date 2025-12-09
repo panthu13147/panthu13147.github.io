@@ -24,7 +24,16 @@
             padding: 15px;
             background: #161b22;
             border-radius: 6px;
-            margin-top: 10px;
+            margin-top: 15px;
+        }
+        .status-complete { color: #39d353; }
+        .tag {
+            background: #238636;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            margin-right: 5px;
         }
     </style>
 </head>
@@ -39,7 +48,7 @@
     <div class="section">
         <p class="command">root@kali:~$ cat about.txt</p>
         <p>
-            Hello! I am a Computer Science student passionate about Network Security and Automation.
+            Hello! I am a Computer Science student at KJSIT passionate about Network Security and Automation.
             I build tools to test system security and automate boring tasks.
             Currently learning: <b>Ethical Hacking & React.js</b>.
         </p>
@@ -49,12 +58,30 @@
         <p class="command">root@kali:~$ ls ./projects</p>
         
         <div class="project-card">
-            <h3>🔐 Python Password Strength Checker</h3>
-            <p>A cybersecurity tool that assesses password complexity using RegEx.</p>
-            <p>Status: <span style="color:#39d353">Completed</span></p>
+            <h3>🛡️ Python Network Port Scanner</h3>
+            <p>
+                <span class="tag">Networking</span>
+                <span class="tag">Sockets</span>
+            </p>
+            <p>A multithreaded network tool that scans a target IP to identify open ports (SSH, HTTP, etc.) for security analysis.</p>
+            <p>Status: <span class="status-complete">Completed</span></p>
+            <br>
+            <a href="https://github.com/panthu13147/Python-Network-Port-Scanner" target="_blank">
+                [ View Source Code ]
+            </a>
+        </div>
+
+        <div class="project-card">
+            <h3>🔐 Password Strength Analyzer</h3>
+            <p>
+                <span class="tag">Logic</span>
+                <span class="tag">Regex</span>
+            </p>
+            <p>A tool that analyzes password complexity based on length, symbols, and patterns to prevent weak credentials.</p>
+            <p>Status: <span class="status-complete">Completed</span></p>
             <br>
             <a href="https://github.com/panthu13147/Python-Password-Strength-Checker" target="_blank">
-                [ View Source Code on GitHub ]
+                [ View Source Code ]
             </a>
         </div>
 
@@ -64,7 +91,7 @@
         <p class="command">root@kali:~$ ./contact_me</p>
         <p>Find me on:</p>
         <ul>
-            <li><a href="https://www.linkedin.com/in/panth-shah-700165295/" target="_blank">LinkedIn Profile</a></li>
+            <li><a href="https://www.linkedin.com/in/panth-shah-cs/" target="_blank">LinkedIn Profile</a></li>
             <li><a href="https://github.com/panthu13147" target="_blank">GitHub Profile</a></li>
         </ul>
     </div>
