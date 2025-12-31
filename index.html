@@ -3,128 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panth Shah | Cybersecurity Portfolio</title>
+    <title>Developer Portfolio</title>
     <style>
+        /* --- CSS STYLES --- */
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8; /* Light Blue */
+            --accent-hover: #0ea5e9;
+        }
+
         body {
-            background-color: #0d1117; /* GitHub Dark Mode */
-            color: #00f0ff; /* Cyberpunk Blue */
-            font-family: 'Courier New', Courier, monospace;
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
         }
-        h1 { border-bottom: 2px solid #00f0ff; padding-bottom: 10px; }
-        .section { margin-bottom: 30px; }
-        .command { color: #39d353; font-weight: bold; } /* Terminal Green */
-        a { color: #fff; text-decoration: underline; }
-        a:hover { color: #00f0ff; }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: linear-gradient(to bottom, #1e293b, #0f172a);
+            border-bottom: 1px solid #334155;
+        }
+
+        h1 { font-size: 2.8rem; margin-bottom: 0.5rem; letter-spacing: -1px; }
+        .subtitle { color: var(--accent); font-size: 1.3rem; font-weight: 500; }
         
-        .project-card {
-            border: 1px solid #30363d;
-            padding: 15px;
-            background: #161b22;
-            border-radius: 6px;
-            margin-top: 15px;
+        /* Layout */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
         }
-        .status-complete { color: #39d353; }
+
+        .section-title {
+            border-left: 5px solid var(--accent);
+            padding-left: 1rem;
+            margin-bottom: 2.5rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        /* Projects Grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Cards */
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.2s, border-color 0.2s;
+            border: 1px solid #334155;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .card-content { padding: 2rem; flex-grow: 1; }
+
+        /* Tags */
+        .tag-container { margin-bottom: 1rem; }
         .tag {
-            background: #238636;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 0.8em;
-            margin-right: 5px;
+            background-color: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+
+        h3 { margin: 0 0 1rem 0; font-size: 1.5rem; color: #fff; }
+        
+        p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1rem; }
+
+        /* Feature List in Card */
+        ul.feature-list {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            padding-left: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        ul.feature-list li { margin-bottom: 0.4rem; }
+
+        /* Button */
+        .btn {
+            display: block;
+            text-align: center;
+            background-color: var(--accent);
+            color: #0f172a;
+            padding: 0.8rem 1rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: background 0.2s;
+        }
+
+        .btn:hover { background-color: var(--accent-hover); }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 4rem;
+            border-top: 1px solid #334155;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <p class="command">root@kali:~$ ./whoami</p>
-        <h1>Panth Shah</h1>
-        <p>CS Student | Cybersecurity Enthusiast | Python Developer</p>
+        <h1>[Your Name Here]</h1>
+        <div class="subtitle">Python Developer | Data Engineer | Automation</div>
     </header>
 
-    <div class="section">
-        <p class="command">root@kali:~$ cat about.txt</p>
-        <p>
-            Hello! I am a Computer Science student at KJSIT passionate about Network Security and Automation.
-            I build tools to test system security and automate boring tasks.
-            Currently learning: <b>Ethical Hacking & React.js</b>.
-        </p>
-    </div>
-
-    <div class="section">
-        <p class="command">root@kali:~$ ls ./projects</p>
+    <div class="container">
         
-        <div class="project-card">
-            <h3>🛡️ Python Network Port Scanner</h3>
-            <p>
-                <span class="tag">Networking</span>
-                <span class="tag">Sockets</span>
-            </p>
-            <p>A multithreaded network tool that scans a target IP to identify open ports (SSH, HTTP, etc.) for security analysis.</p>
-            <p>Status: <span class="status-complete">Completed</span></p>
-            <br>
-            <a href="https://github.com/panthu13147/Python-Network-Port-Scanner" target="_blank">
-                [ View Source Code ]
-            </a>
-        </div>
+        <h2 class="section-title">Featured Projects</h2>
+        
+        <div class="project-grid">
 
-        <div class="project-card">
-            <h3>👁️ System Input Monitor</h3>
-            <p>
-                <span class="tag">System Internals</span>
-                <span class="tag">Forensics</span>
-            </p>
-            <p>A background process that hooks into keyboard events to log system activity. Built to understand input handling and forensic logging.</p>
-            <p>Status: <span class="status-complete">Completed</span></p>
-            <br>
-            <a href="https://github.com/panthu13147/Python-System-Monitor" target="_blank">
-                [ View Source Code ]
-            </a>
-        </div>
+            <div class="card">
+                <div class="card-content">
+                    <div class="tag-container">
+                        <span class="tag">Python 3.12</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">Automation</span>
+                    </div>
+                    <h3>📈 Live Crypto Market Tracker</h3>
+                    <p>
+                        A full-stack data engineering tool that automates the tracking and analysis of real-time financial markets. It builds its own historical dataset from scratch.
+                    </p>
+                    <ul class="feature-list">
+                        <li>🚀 <strong>Multi-Asset:</strong> Tracks BTC, ETH, & SOL simultaneously.</li>
+                        <li>🛡️ <strong>Resilient:</strong> Bypasses anti-bot protections.</li>
+                        <li>📊 <strong>Analytics:</strong> Auto-calculates Mean/Max/Min prices.</li>
+                        <li>💾 <strong>Storage:</strong> Self-healing CSV database.</li>
+                    </ul>
+                    
+                    <a href="#" class="btn" target="_blank">View Code on GitHub &rarr;</a>
+                </div>
+            </div>
 
-        <div class="project-card">
-            <h3>🔐 Password Strength Analyzer</h3>
-            <p>
-                <span class="tag">Logic</span>
-                <span class="tag">Regex</span>
-            </p>
-            <p>A tool that analyzes password complexity based on length, symbols, and patterns to prevent weak credentials.</p>
-            <p>Status: <span class="status-complete">Completed</span></p>
-            <br>
-            <a href="https://github.com/panthu13147/Python-Password-Strength-Checker" target="_blank">
-                [ View Source Code ]
-            </a>
-        </div>
-        <div class="project-card">
-    <h3>📉 Cloud Price Arbitrage Bot</h3>
-    <p>
-        An automated data pipeline that tracks cryptocurrency/product prices in real-time. 
-        It scrapes data every 10 minutes, analyzes trends using Pandas, and visualizes market gaps. 
-        Hosted 24/7 on the cloud using GitHub Actions CI/CD.
-    </p>
-    <ul class="tech-stack">
-        <li>Python</li>
-        <li>Pandas</li>
-        <li>GitHub Actions (Cloud)</li>
-        <li>Matplotlib</li>
-    </ul>
-    <div class="links">
-        <a href="https://github.com/panthu13147/price-bot" target="_blank" class="btn">View Code ↗</a>
-    </div>
-</div>
+            <div class="card">
+                <div class="card-content">
+                    <div class="tag-container">
+                        <span class="tag">API Trading</span>
+                        <span class="tag">Finance</span>
+                    </div>
+                    <h3>🤖 Binance API Algo-Trader</h3>
+                    <p>
+                        An algorithmic trading bot that connects directly to the Binance exchange to execute trades based on moving average crossovers.
+                    </p>
+                    <ul class="feature-list">
+                        <li>⚡ <strong>Speed:</strong> Millisecond-latency execution.</li>
+                        <li>💰 <strong>Strategy:</strong> Trend-following algorithm.</li>
+                        <li>🔐 <strong>Security:</strong> API Key encryption.</li>
+                    </ul>
+                    <a href="#" class="btn" style="opacity: 0.5; pointer-events: none; background-color: #475569; color: #94a3b8;">Coming Soon...</a>
+                </div>
+            </div>
 
+        </div>
     </div>
 
-    <div class="section">
-        <p class="command">root@kali:~$ ./contact_me</p>
-        <p>Find me on:</p>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/panth-shah-cs/" target="_blank">LinkedIn Profile</a></li>
-            <li><a href="https://github.com/panthu13147" target="_blank">GitHub Profile</a></li>
-        </ul>
+    <div class="footer">
+        &copy; 2025 [Your Name]. Built with Python & Coffee.
     </div>
 
 </body>
