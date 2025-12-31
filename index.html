@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer Portfolio</title>
+    <title>Panth Chetan Shah - Developer Portfolio</title>
     <style>
         /* --- CSS STYLES --- */
         :root {
@@ -27,13 +27,28 @@
         /* Header */
         header {
             text-align: center;
-            padding: 4rem 1rem;
+            padding: 5rem 1rem;
             background: linear-gradient(to bottom, #1e293b, #0f172a);
             border-bottom: 1px solid #334155;
         }
 
-        h1 { font-size: 2.8rem; margin-bottom: 0.5rem; letter-spacing: -1px; }
-        .subtitle { color: var(--accent); font-size: 1.3rem; font-weight: 500; }
+        /* Name Styling - The "Brand" Look */
+        h1 { 
+            font-size: 3.5rem; 
+            margin-bottom: 0.5rem; 
+            letter-spacing: 2px;
+            text-transform: uppercase; /* Forces Capitalization */
+            font-weight: 800; /* Extra Bold */
+            color: #fff;
+        }
+
+        /* Styling the last name differently for effect */
+        .highlight-name {
+            color: var(--accent);
+            font-style: italic; /* Italics as requested */
+        }
+
+        .subtitle { color: var(--text-secondary); font-size: 1.3rem; font-weight: 400; letter-spacing: 1px; }
         
         /* Layout */
         .container {
@@ -45,150 +60,4 @@
         .section-title {
             border-left: 5px solid var(--accent);
             padding-left: 1rem;
-            margin-bottom: 2.5rem;
-            font-size: 1.8rem;
-            font-weight: 700;
-        }
-
-        /* Projects Grid */
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        /* Cards */
-        .card {
-            background-color: var(--card-bg);
-            border-radius: 16px;
-            overflow: hidden;
-            transition: transform 0.2s, border-color 0.2s;
-            border: 1px solid #334155;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent);
-        }
-
-        .card-content { padding: 2rem; flex-grow: 1; }
-
-        /* Tags */
-        .tag-container { margin-bottom: 1rem; }
-        .tag {
-            background-color: rgba(56, 189, 248, 0.1);
-            color: var(--accent);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-right: 0.5rem;
-            display: inline-block;
-            margin-bottom: 0.5rem;
-        }
-
-        h3 { margin: 0 0 1rem 0; font-size: 1.5rem; color: #fff; }
-        
-        p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1rem; }
-
-        /* Feature List in Card */
-        ul.feature-list {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            padding-left: 1.2rem;
-            margin-bottom: 2rem;
-        }
-        ul.feature-list li { margin-bottom: 0.4rem; }
-
-        /* Button */
-        .btn {
-            display: block;
-            text-align: center;
-            background-color: var(--accent);
-            color: #0f172a;
-            padding: 0.8rem 1rem;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 1rem;
-            transition: background 0.2s;
-        }
-
-        .btn:hover { background-color: var(--accent-hover); }
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            padding: 3rem;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-top: 4rem;
-            border-top: 1px solid #334155;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>[Your Name Here]</h1>
-        <div class="subtitle">Python Developer | Data Engineer | Automation</div>
-    </header>
-
-    <div class="container">
-        
-        <h2 class="section-title">Featured Projects</h2>
-        
-        <div class="project-grid">
-
-            <div class="card">
-                <div class="card-content">
-                    <div class="tag-container">
-                        <span class="tag">Python 3.12</span>
-                        <span class="tag">Pandas</span>
-                        <span class="tag">Automation</span>
-                    </div>
-                    <h3>📈 Live Crypto Market Tracker</h3>
-                    <p>
-                        A full-stack data engineering tool that automates the tracking and analysis of real-time financial markets. It builds its own historical dataset from scratch.
-                    </p>
-                    <ul class="feature-list">
-                        <li>🚀 <strong>Multi-Asset:</strong> Tracks BTC, ETH, & SOL simultaneously.</li>
-                        <li>🛡️ <strong>Resilient:</strong> Bypasses anti-bot protections.</li>
-                        <li>📊 <strong>Analytics:</strong> Auto-calculates Mean/Max/Min prices.</li>
-                        <li>💾 <strong>Storage:</strong> Self-healing CSV database.</li>
-                    </ul>
-                    
-                    <a href="#" class="btn" target="_blank">View Code on GitHub &rarr;</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content">
-                    <div class="tag-container">
-                        <span class="tag">API Trading</span>
-                        <span class="tag">Finance</span>
-                    </div>
-                    <h3>🤖 Binance API Algo-Trader</h3>
-                    <p>
-                        An algorithmic trading bot that connects directly to the Binance exchange to execute trades based on moving average crossovers.
-                    </p>
-                    <ul class="feature-list">
-                        <li>⚡ <strong>Speed:</strong> Millisecond-latency execution.</li>
-                        <li>💰 <strong>Strategy:</strong> Trend-following algorithm.</li>
-                        <li>🔐 <strong>Security:</strong> API Key encryption.</li>
-                    </ul>
-                    <a href="#" class="btn" style="opacity: 0.5; pointer-events: none; background-color: #475569; color: #94a3b8;">Coming Soon...</a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="footer">
-        &copy; 2025 [Your Name]. Built with Python & Coffee.
-    </div>
-
-</body>
-</html>
+            margin
