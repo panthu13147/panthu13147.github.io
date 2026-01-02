@@ -59,7 +59,7 @@
         
         /* Layout */
         .container {
-            max-width: 1200px; /* Made wider to fit more projects */
+            max-width: 1200px;
             margin: 0 auto;
             padding: 3rem 2rem;
         }
@@ -118,7 +118,7 @@
             color: var(--text-secondary);
             font-size: 0.95rem;
             margin-bottom: 1.5rem;
-            flex-grow: 1; /* Pushes button to bottom */
+            flex-grow: 1;
         }
 
         .tech-stack {
@@ -137,7 +137,7 @@
             font-weight: 500;
         }
 
-        /* Buttons */
+        /* Buttons & Links */
         .btn {
             display: inline-block;
             padding: 0.6rem 1.2rem;
@@ -158,6 +158,27 @@
             background-color: var(--accent-hover);
         }
 
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background-color: var(--card-bg);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: 0.2s;
+            border: 1px solid #334155;
+            margin: 10px 0;
+            width: fit-content;
+        }
+
+        .contact-link:hover {
+            border-color: var(--accent);
+            transform: translateX(5px);
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -171,6 +192,7 @@
             h1 { font-size: 2.5rem; }
             .subtitle { font-size: 1.1rem; }
             .projects-grid { grid-template-columns: 1fr; }
+            .contact-link { width: 100%; justify-content: center; box-sizing: border-box; }
         }
     </style>
 </head>
@@ -314,11 +336,22 @@
         <div style="height: 3rem;"></div>
 
         <section id="contact">
-            <h2 class="section-title">Contact</h2>
+            <h2 class="section-title">Get In Touch</h2>
             <p style="color: var(--text-secondary); margin-bottom: 2rem;">
-                Interested in collaborating or hiring? Let's connect.
+                Interested in collaborating or hiring? Reach out directly.
             </p>
-            <a href="mailto:your-email@example.com" class="btn btn-primary">Email Me</a>
+            
+            <div style="display: flex; flex-direction: column; align-items: start; gap: 0.5rem;">
+                
+                <a href="mailto:your_email@gmail.com" class="contact-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>panthu13147gmail.com</span>  </a>
+
+                <a href="tel:+919876543210" class="contact-link">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9029950399</span>       </a>
+
+            </div>
         </section>
 
     </div>
