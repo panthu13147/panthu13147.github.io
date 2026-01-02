@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panth Chetan Shah - Developer Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
         /* --- CSS STYLES --- */
         :root {
@@ -16,7 +18,7 @@
         }
 
         body {
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
             margin: 0;
@@ -37,9 +39,10 @@
             font-size: 3.5rem; 
             margin-bottom: 0.5rem; 
             letter-spacing: 2px;
-            text-transform: uppercase; /* Forces Capitalization */
-            font-weight: 800; /* Extra Bold */
+            text-transform: uppercase; 
+            font-weight: 800; 
             color: #fff;
+            margin-top: 0;
         }
 
         /* Styling the last name differently for effect */
@@ -48,7 +51,12 @@
             font-style: italic;
         }
 
-        .subtitle { color: var(--text-secondary); font-size: 1.3rem; font-weight: 400; letter-spacing: 1px; }
+        .subtitle { 
+            color: var(--text-secondary); 
+            font-size: 1.3rem; 
+            font-weight: 400; 
+            letter-spacing: 1px; 
+        }
         
         /* Layout */
         .container {
@@ -60,4 +68,187 @@
         .section-title {
             border-left: 5px solid var(--accent);
             padding-left: 1rem;
-            margin-bottom: 2.5rem
+            margin-bottom: 2.5rem;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        /* --- PROJECTS GRID --- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 2rem;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .project-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .project-icon {
+            font-size: 2rem;
+            color: var(--accent);
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0;
+            color: #fff;
+        }
+
+        .project-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tag {
+            background-color: #334155;
+            color: #e2e8f0;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: #0f172a;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-secondary);
+            border-top: 1px solid #334155;
+            margin-top: 4rem;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .subtitle { font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container" style="padding: 0;">
+            <h1>Panth <span class="highlight-name">Shah</span></h1>
+            <div class="subtitle">Python Developer & Algorithmic Trader</div>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 800px;">
+                I am a passionate developer focused on building high-performance automated systems. 
+                My expertise lies in Python, Data Science, and Financial Algorithms. I love turning complex logic into code that generates real value.
+            </p>
+        </section>
+
+        <div style="height: 3rem;"></div> <section id="projects">
+            <h2 class="section-title">Featured Projects</h2>
+            
+            <div class="projects-grid">
+                
+                <article class="project-card">
+                    <div class="project-header">
+                        <i class="fa-solid fa-chart-line project-icon"></i>
+                    </div>
+                    <h3 class="project-title">Multi-Coin Algo Trader</h3>
+                    <div style="height: 10px;"></div>
+                    <p class="project-desc">
+                        A professional-grade automated trading bot that scans 4 cryptocurrency markets (BTC, ETH, SOL, BNB) simultaneously. 
+                        It features a custom <strong>RSI Mean Reversion</strong> algorithm, automated risk management (Stop Loss/Take Profit), 
+                        and a persistent JSON database to survive system restarts.
+                    </p>
+                    
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Binance API</span>
+                        <span class="tech-tag">Discord Webhooks</span>
+                    </div>
+
+                    <a href="https://github.com/panthu13147/Python-Crypto-Algo-Trader" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
+                </article>
+
+                <article class="project-card" style="opacity: 0.7;">
+                    <div class="project-header">
+                        <i class="fa-solid fa-code project-icon" style="color: var(--text-secondary);"></i>
+                    </div>
+                    <h3 class="project-title">More Coming Soon...</h3>
+                    <div style="height: 10px;"></div>
+                    <p class="project-desc">
+                        Currently working on new tools for data analysis and automation. Stay tuned for updates.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">In Progress</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <div style="height: 3rem;"></div> <section id="contact">
+            <h2 class="section-title">Contact</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+                Interested in collaborating or hiring? Let's connect.
+            </p>
+            <a href="mailto:your-email@example.com" class="btn btn-primary">Email Me</a>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Panth Chetan Shah. Built with Code & Logic.</p>
+    </footer>
+
+</body>
+</html>
