@@ -1,0 +1,18 @@
+{
+    "BTC/USDT": {
+        "in_position": false,
+        "entry_price": 0
+    },
+    "ETH/USDT": {
+        "in_position": false,
+        "entry_price": 0
+    },
+    "SOL/USDT": {
+        "in_position": false,
+        "entry_price": 0
+    },
+    "BNB/USDT": {
+        "in_position": false,
+        "entry_price": 0
+    }
+}

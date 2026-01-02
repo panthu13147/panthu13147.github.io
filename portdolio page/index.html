@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panth Shah | Cybersecurity Portfolio</title>
+    <style>
+        body {
+            background-color: #0d1117; /* GitHub Dark Mode */
+            color: #00f0ff; /* Cyberpunk Blue */
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        h1 { border-bottom: 2px solid #00f0ff; padding-bottom: 10px; }
+        .section { margin-bottom: 30px; }
+        .command { color: #39d353; font-weight: bold; } /* Terminal Green */
+        a { color: #fff; text-decoration: underline; }
+        a:hover { color: #00f0ff; }
+        
+        .project-card {
+            border: 1px solid #30363d;
+            padding: 15px;
+            background: #161b22;
+            border-radius: 6px;
+            margin-top: 15px;
+        }
+        .status-complete { color: #39d353; }
+        .tag {
+            background: #238636;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <p class="command">root@kali:~$ ./whoami</p>
+        <h1>Panth Shah</h1>
+        <p>CS Student | Cybersecurity Enthusiast | Python Developer</p>
+    </header>
+
+    <div class="section">
+        <p class="command">root@kali:~$ cat about.txt</p>
+        <p>
+            Hello! I am a Computer Science student at KJSIT passionate about Network Security and Automation.
+            I build tools to test system security and automate boring tasks.
+            Currently learning: <b>Ethical Hacking & React.js</b>.
+        </p>
+    </div>
+
+    <div class="section">
+        <p class="command">root@kali:~$ ls ./projects</p>
+        
+        <div class="project-card">
+            <h3>🛡️ Python Network Port Scanner</h3>
+            <p>
+                <span class="tag">Networking</span>
+                <span class="tag">Sockets</span>
+            </p>
+            <p>A multithreaded network tool that scans a target IP to identify open ports (SSH, HTTP, etc.) for security analysis.</p>
+            <p>Status: <span class="status-complete">Completed</span></p>
+            <br>
+            <a href="https://github.com/panthu13147/Python-Network-Port-Scanner" target="_blank">
+                [ View Source Code ]
+            </a>
+        </div>
+
+        <div class="project-card">
+            <h3>👁️ System Input Monitor</h3>
+            <p>
+                <span class="tag">System Internals</span>
+                <span class="tag">Forensics</span>
+            </p>
+            <p>A background process that hooks into keyboard events to log system activity. Built to understand input handling and forensic logging.</p>
+            <p>Status: <span class="status-complete">Completed</span></p>
+            <br>
+            <a href="https://github.com/panthu13147/Python-System-Monitor" target="_blank">
+                [ View Source Code ]
+            </a>
+        </div>
+
+        <div class="project-card">
+            <h3>🔐 Password Strength Analyzer</h3>
+            <p>
+                <span class="tag">Logic</span>
+                <span class="tag">Regex</span>
+            </p>
+            <p>A tool that analyzes password complexity based on length, symbols, and patterns to prevent weak credentials.</p>
+            <p>Status: <span class="status-complete">Completed</span></p>
+            <br>
+            <a href="https://github.com/panthu13147/Python-Password-Strength-Checker" target="_blank">
+                [ View Source Code ]
+            </a>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <p class="command">root@kali:~$ ./contact_me</p>
+        <p>Find me on:</p>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/panth-shah-cs/" target="_blank">LinkedIn Profile</a></li>
+            <li><a href="https://github.com/panthu13147" target="_blank">GitHub Profile</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
