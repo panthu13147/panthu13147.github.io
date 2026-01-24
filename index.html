@@ -67,10 +67,11 @@
 
         .project-card:hover { transform: translateY(-5px); border-color: var(--accent); }
 
+        /* Featured Card Styling */
         .featured-card {
             border: 1px solid var(--accent);
             background: linear-gradient(145deg, #1e293b, #111b2d);
-            grid-column: 1 / -1; /* Makes the featured project span full width */
+            grid-column: 1 / -1; 
         }
 
         .project-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
@@ -105,6 +106,7 @@
             h1 { font-size: 2.5rem; }
             .subtitle { font-size: 1.1rem; }
             .contact-link { width: 100%; justify-content: center; }
+            .featured-card { grid-column: auto; } /* Stack normally on mobile */
         }
     </style>
 </head>
@@ -150,7 +152,7 @@
                         <span class="tech-tag">Algorithmic Trading</span>
                     </div>
                     <a href="https://github.com/panthu13147" target="_blank" class="btn btn-primary">
-                        <i class="fab fa-github"></i> View Architecture & Logs
+                        <i class="fab fa-github"></i> View Architecture
                     </a>
                 </article>
 
@@ -159,12 +161,17 @@
                         <i class="fa-solid fa-chart-line project-icon"></i>
                     </div>
                     <h3 class="project-title">Multi-Coin Algo Trader</h3>
-                    <p class="project-desc">Professional-grade bot scanning BTC, ETH, SOL, and BNB using RSI Mean Reversion logic.</p>
+                    <p class="project-desc">
+                        Professional-grade automated trading bot scanning BTC, ETH, SOL, and BNB. Features RSI Mean Reversion logic, risk management, and persistent JSON state tracking.
+                    </p>
                     <div class="tech-stack">
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Binance API</span>
                     </div>
-                    <a href="#" class="btn btn-primary"><i class="fab fa-github"></i> View Code</a>
+                    <a href="https://github.com/panthu13147/Python-Crypto-Algo-Trader" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
                 </article>
 
                 <article class="project-card">
@@ -172,12 +179,89 @@
                         <i class="fa-solid fa-microchip project-icon"></i>
                     </div>
                     <h3 class="project-title">System Monitor</h3>
-                    <p class="project-desc">Real-time dashboard for tracking CPU, memory, and disk health metrics.</p>
+                    <p class="project-desc">
+                        Real-time dashboard for tracking CPU usage, memory allocation, and disk health. Helps visualize system performance metrics efficiently.
+                    </p>
                     <div class="tech-stack">
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">Psutil</span>
+                        <span class="tech-tag">System Admin</span>
                     </div>
-                    <a href="#" class="btn btn-primary"><i class="fab fa-github"></i> View Code</a>
+                    <a href="https://github.com/panthu13147/Python-System-Monitor" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <i class="fa-solid fa-network-wired project-icon"></i>
+                    </div>
+                    <h3 class="project-title">Network Port Scanner</h3>
+                    <p class="project-desc">
+                        A cybersecurity tool that scans IP addresses for open ports. Useful for network diagnostics and identifying potential security vulnerabilities.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Sockets</span>
+                        <span class="tech-tag">Networking</span>
+                    </div>
+                    <a href="https://github.com/panthu13147/Python-Network-Port-Scanner" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <i class="fa-solid fa-lock project-icon"></i>
+                    </div>
+                    <h3 class="project-title">Password Strength Checker</h3>
+                    <p class="project-desc">
+                        A security utility that evaluates password complexity based on length, character variety, and entropy. Helps users improve their digital security.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Regex</span>
+                        <span class="tech-tag">Security</span>
+                    </div>
+                    <a href="https://github.com/panthu13147/Python-Password-Strength-Checker" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <i class="fa-solid fa-robot project-icon"></i>
+                    </div>
+                    <h3 class="project-title">Price Bot</h3>
+                    <p class="project-desc">
+                        An automated bot designed to fetch and alert on real-time asset prices. Can be configured for various markets to track volatility.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">APIs</span>
+                        <span class="tech-tag">Automation</span>
+                    </div>
+                    <a href="https://github.com/panthu13147/price-bot" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <i class="fa-solid fa-coins project-icon"></i>
+                    </div>
+                    <h3 class="project-title">Crypto Market Tracker</h3>
+                    <p class="project-desc">
+                        A data aggregation tool that tracks broader market trends, total market cap, and volume across major cryptocurrencies.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Data Analysis</span>
+                        <span class="tech-tag">Finance</span>
+                    </div>
+                    <a href="https://github.com/panthu13147/crypto-market-tracker" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
                 </article>
 
             </div>
