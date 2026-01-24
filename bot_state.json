@@ -1,18 +1,18 @@
 {
     "BTC/USDT": {
-        "in_position": false,
-        "entry_price": 0
+        "in_position": true,
+        "entry_price": 89362.0
     },
     "ETH/USDT": {
-        "in_position": false,
-        "entry_price": 0
+        "in_position": true,
+        "entry_price": 3050.52
     },
     "SOL/USDT": {
-        "in_position": false,
-        "entry_price": 0
+        "in_position": true,
+        "entry_price": 128.31
     },
     "BNB/USDT": {
-        "in_position": false,
-        "entry_price": 0
+        "in_position": true,
+        "entry_price": 870.49
     }
 }

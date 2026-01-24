@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panth Chetan Shah - Developer Portfolio</title>
+    <title>Panth Chetan Shah - HFT Developer Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        /* --- CSS STYLES --- */
         :root {
             --bg-color: #0f172a;
             --card-bg: #1e293b;
             --text-main: #f8fafc;
             --text-secondary: #94a3b8;
-            --accent: #38bdf8; /* Light Blue */
+            --accent: #38bdf8;
             --accent-hover: #0ea5e9;
         }
 
@@ -21,12 +20,9 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
+            margin: 0; padding: 0; line-height: 1.6;
         }
 
-        /* Header */
         header {
             text-align: center;
             padding: 5rem 1rem;
@@ -34,46 +30,26 @@
             border-bottom: 1px solid #334155;
         }
 
-        /* Name Styling */
         h1 { 
-            font-size: 3.5rem; 
-            margin-bottom: 0.5rem; 
-            letter-spacing: 2px;
-            text-transform: uppercase; 
-            font-weight: 800; 
-            color: #fff;
-            margin-top: 0;
+            font-size: 3.5rem; margin-bottom: 0.5rem; letter-spacing: 2px;
+            text-transform: uppercase; font-weight: 800; color: #fff; margin-top: 0;
         }
 
-        .highlight-name {
-            color: var(--accent);
-            font-style: italic;
-        }
+        .highlight-name { color: var(--accent); font-style: italic; }
 
         .subtitle { 
-            color: var(--text-secondary); 
-            font-size: 1.3rem; 
-            font-weight: 400; 
-            letter-spacing: 1px; 
+            color: var(--text-secondary); font-size: 1.3rem; 
+            font-weight: 400; letter-spacing: 1px; 
         }
         
-        /* Layout */
-        .container {
-            max-width: 1200px; /* Made wider to fit more projects */
-            margin: 0 auto;
-            padding: 3rem 2rem;
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 3rem 2rem; }
 
         .section-title {
             border-left: 5px solid var(--accent);
-            padding-left: 1rem;
-            margin-bottom: 2.5rem;
-            font-size: 2rem;
-            font-weight: 700;
-            color: #fff;
+            padding-left: 1rem; margin-bottom: 2.5rem;
+            font-size: 2rem; font-weight: 700; color: #fff;
         }
 
-        /* --- PROJECTS GRID --- */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -86,91 +62,49 @@
             border-radius: 12px;
             padding: 2rem;
             transition: transform 0.2s, border-color 0.2s;
-            display: flex;
-            flex-direction: column;
+            display: flex; flex-direction: column;
         }
 
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent);
+        .project-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+
+        .featured-card {
+            border: 1px solid var(--accent);
+            background: linear-gradient(145deg, #1e293b, #111b2d);
+            grid-column: 1 / -1; /* Makes the featured project span full width */
         }
 
-        .project-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 1rem;
-        }
+        .project-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+        .project-icon { font-size: 2rem; color: var(--accent); }
+        .project-title { font-size: 1.4rem; font-weight: 700; margin: 0; color: #fff; }
+        .project-desc { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1; }
 
-        .project-icon {
-            font-size: 2rem;
-            color: var(--accent);
-        }
+        .tech-stack { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+        .tech-tag { background-color: #334155; color: #e2e8f0; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; }
+        .featured-tag { background: #fbbf24; color: #000; font-weight: bold; }
 
-        .project-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin: 0;
-            color: #fff;
-        }
-
-        .project-desc {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-            flex-grow: 1; /* Pushes button to bottom */
-        }
-
-        .tech-stack {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            margin-bottom: 1.5rem;
-        }
-
-        .tech-tag {
-            background-color: #334155;
-            color: #e2e8f0;
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        /* Buttons */
         .btn {
-            display: inline-block;
-            padding: 0.6rem 1.2rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.2s;
-            font-size: 0.9rem;
-            text-align: center;
+            display: inline-block; padding: 0.6rem 1.2rem; border-radius: 6px;
+            text-decoration: none; font-weight: 600; transition: background 0.2s;
+            font-size: 0.9rem; text-align: center;
         }
 
-        .btn-primary {
-            background-color: var(--accent);
-            color: #0f172a;
+        .btn-primary { background-color: var(--accent); color: #0f172a; }
+        .btn-primary:hover { background-color: var(--accent-hover); }
+
+        .contact-link {
+            display: flex; align-items: center; gap: 12px; background-color: var(--card-bg);
+            color: #fff; padding: 1rem 2rem; border-radius: 8px; text-decoration: none;
+            transition: 0.2s; border: 1px solid #334155; margin: 10px 0; width: fit-content;
         }
 
-        .btn-primary:hover {
-            background-color: var(--accent-hover);
-        }
+        .contact-link:hover { border-color: var(--accent); transform: translateX(5px); }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 3rem;
-            color: var(--text-secondary);
-            border-top: 1px solid #334155;
-            margin-top: 4rem;
-        }
+        footer { text-align: center; padding: 3rem; color: var(--text-secondary); border-top: 1px solid #334155; margin-top: 4rem; }
 
         @media (max-width: 768px) {
             h1 { font-size: 2.5rem; }
             .subtitle { font-size: 1.1rem; }
-            .projects-grid { grid-template-columns: 1fr; }
+            .contact-link { width: 100%; justify-content: center; }
         }
     </style>
 </head>
@@ -179,7 +113,7 @@
     <header>
         <div class="container" style="padding: 0;">
             <h1>Panth <span class="highlight-name">Shah</span></h1>
-            <div class="subtitle">Python Developer & Algorithmic Trader</div>
+            <div class="subtitle">C++/Python Developer & High-Frequency Trading Architect</div>
         </div>
     </header>
 
@@ -188,8 +122,8 @@
         <section id="about">
             <h2 class="section-title">About Me</h2>
             <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 800px;">
-                I am a passionate developer focused on building high-performance automated systems. 
-                My expertise lies in Python, Data Science, and Financial Algorithms. I love turning complex logic into code that generates real value.
+                I am a system architect specializing in high-performance automated trading systems. 
+                I bridge the gap between low-level <strong>C++ execution engines</strong> and high-level <strong>Python data pipelines</strong> to build trading infrastructure that reacts to live market volatility in real-time.
             </p>
         </section>
 
@@ -200,22 +134,37 @@
             
             <div class="projects-grid">
                 
+                <article class="project-card featured-card">
+                    <div class="project-header">
+                        <i class="fa-solid fa-bolt project-icon" style="color: #fbbf24;"></i>
+                        <span class="tech-tag featured-tag">NEW: ARCHITECTURE PHASE</span>
+                    </div>
+                    <h3 class="project-title">HFT Live Execution Engine</h3>
+                    <p class="project-desc">
+                        A dual-language trading architecture. Developed a high-speed C++ matching engine for order processing connected via a Python bridge to the Crypto.com API. Includes real-time moving average analysis and noise-filtering logic.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">C++17</span>
+                        <span class="tech-tag">Python 3.12</span>
+                        <span class="tech-tag">IPC Pipes</span>
+                        <span class="tech-tag">Algorithmic Trading</span>
+                    </div>
+                    <a href="https://github.com/panthu13147" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-github"></i> View Architecture & Logs
+                    </a>
+                </article>
+
                 <article class="project-card">
                     <div class="project-header">
                         <i class="fa-solid fa-chart-line project-icon"></i>
                     </div>
                     <h3 class="project-title">Multi-Coin Algo Trader</h3>
-                    <p class="project-desc">
-                        A professional-grade automated trading bot scanning BTC, ETH, SOL, and BNB. Features RSI Mean Reversion logic, risk management, and persistent JSON state tracking.
-                    </p>
+                    <p class="project-desc">Professional-grade bot scanning BTC, ETH, SOL, and BNB using RSI Mean Reversion logic.</p>
                     <div class="tech-stack">
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">Pandas</span>
-                        <span class="tech-tag">Binance API</span>
                     </div>
-                    <a href="https://github.com/panthu13147/Python-Crypto-Algo-Trader" target="_blank" class="btn btn-primary">
-                        <i class="fab fa-github"></i> View Code
-                    </a>
+                    <a href="#" class="btn btn-primary"><i class="fab fa-github"></i> View Code</a>
                 </article>
 
                 <article class="project-card">
@@ -223,89 +172,12 @@
                         <i class="fa-solid fa-microchip project-icon"></i>
                     </div>
                     <h3 class="project-title">System Monitor</h3>
-                    <p class="project-desc">
-                        A real-time dashboard for tracking CPU usage, memory allocation, and disk health. Helps visualize system performance metrics efficiently.
-                    </p>
+                    <p class="project-desc">Real-time dashboard for tracking CPU, memory, and disk health metrics.</p>
                     <div class="tech-stack">
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">Psutil</span>
-                        <span class="tech-tag">System Admin</span>
                     </div>
-                    <a href="https://github.com/panthu13147/Python-System-Monitor" target="_blank" class="btn btn-primary">
-                        <i class="fab fa-github"></i> View Code
-                    </a>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-header">
-                        <i class="fa-solid fa-network-wired project-icon"></i>
-                    </div>
-                    <h3 class="project-title">Network Port Scanner</h3>
-                    <p class="project-desc">
-                        A cybersecurity tool that scans IP addresses for open ports. Useful for network diagnostics and identifying potential security vulnerabilities.
-                    </p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Sockets</span>
-                        <span class="tech-tag">Networking</span>
-                    </div>
-                    <a href="https://github.com/panthu13147/Python-Network-Port-Scanner" target="_blank" class="btn btn-primary">
-                        <i class="fab fa-github"></i> View Code
-                    </a>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-header">
-                        <i class="fa-solid fa-lock project-icon"></i>
-                    </div>
-                    <h3 class="project-title">Password Strength Checker</h3>
-                    <p class="project-desc">
-                        A security utility that evaluates password complexity based on length, character variety, and entropy. Helps users improve their digital security.
-                    </p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Regex</span>
-                        <span class="tech-tag">Security</span>
-                    </div>
-                    <a href="https://github.com/panthu13147/Python-Password-Strength-Checker" target="_blank" class="btn btn-primary">
-                        <i class="fab fa-github"></i> View Code
-                    </a>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-header">
-                        <i class="fa-solid fa-robot project-icon"></i>
-                    </div>
-                    <h3 class="project-title">Price Bot</h3>
-                    <p class="project-desc">
-                        An automated bot designed to fetch and alert on real-time asset prices. Can be configured for various markets to track volatility.
-                    </p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">APIs</span>
-                        <span class="tech-tag">Automation</span>
-                    </div>
-                    <a href="https://github.com/panthu13147/price-bot" target="_blank" class="btn btn-primary">
-                        <i class="fab fa-github"></i> View Code
-                    </a>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-header">
-                        <i class="fa-solid fa-coins project-icon"></i>
-                    </div>
-                    <h3 class="project-title">Crypto Market Tracker</h3>
-                    <p class="project-desc">
-                        A data aggregation tool that tracks broader market trends, total market cap, and volume across major cryptocurrencies.
-                    </p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Data Analysis</span>
-                        <span class="tech-tag">Finance</span>
-                    </div>
-                    <a href="https://github.com/panthu13147/crypto-market-tracker" target="_blank" class="btn btn-primary">
-                        <i class="fab fa-github"></i> View Code
-                    </a>
+                    <a href="#" class="btn btn-primary"><i class="fab fa-github"></i> View Code</a>
                 </article>
 
             </div>
@@ -314,17 +186,17 @@
         <div style="height: 3rem;"></div>
 
         <section id="contact">
-            <h2 class="section-title">Contact</h2>
-            <p style="color: var(--text-secondary); margin-bottom: 2rem;">
-                Interested in collaborating or hiring? Let's connect.
-            </p>
-            <a href="mailto:your-email@example.com" class="btn btn-primary">Email Me</a>
+            <h2 class="section-title">Get In Touch</h2>
+            <div style="display: flex; flex-direction: column; align-items: start; gap: 0.5rem;">
+                <a href="mailto:panthu13147@gmail.com" class="contact-link"><i class="fas fa-envelope"></i><span>panthu13147@gmail.com</span></a>
+                <a href="tel:+919029950399" class="contact-link"><i class="fas fa-phone"></i><span>+91 9029950399</span></a>
+            </div>
         </section>
 
     </div>
 
     <footer>
-        <p>&copy; 2026 Panth Chetan Shah. Built with Code & Logic.</p>
+        <p>&copy; 2026 Panth Chetan Shah. Built with C++, Python, & Discipline.</p>
     </footer>
 
 </body>
